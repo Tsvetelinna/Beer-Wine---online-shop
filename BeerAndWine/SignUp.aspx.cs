@@ -23,17 +23,28 @@ public partial class SignUp : System.Web.UI.Page
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["BeerAndWineDB"].ConnectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into Users(Username,Password,Email,Name,Role) Values('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "','User')", con);
-                cmd.ExecuteNonQuery();
+                SqlCommand cmdCheck = new SqlCommand("SELECT COUNT(*) FROM Users WHERE (Username = @user)", con);
+                cmdCheck.Parameters.AddWithValue("@user", txtUname.Text);
+                int UserExist = (int) cmdCheck.ExecuteScalar();
 
-                Response.Write("<script> alert('Registration Successfully done');  </script>");
-                clr();
-                con.Close();
-                lblMsg.Text = "Registration Successfully done";
-                lblMsg.ForeColor = System.Drawing.Color.Green;
+                if (UserExist > 0)
+                {
+                    Response.Write("<script> alert('Already exist user with this username');  </script>");
+                    txtPass.Focus();
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into Users(Username,Password,Email,Name,Role) Values('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "','User')", con);
+                    cmd.ExecuteNonQuery();
 
+                    Response.Write("<script> alert('Registration Successfully done');  </script>");
+                    clr();
+                    con.Close();
+                    lblMsg.Text = "Registration Successfully done";
+                    lblMsg.ForeColor = System.Drawing.Color.Green;
+                    Response.Redirect("~/SignIn.aspx");
+                }
             }
-            Response.Redirect("~/SignIn.aspx");
         }
         else
         {
