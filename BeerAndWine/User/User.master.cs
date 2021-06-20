@@ -16,12 +16,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (Session["Username"] != null)
         {
             btnUserLogout.Visible = true;
-            btnUserLogin.Visible = false;
         }
         else
         {
             btnUserLogout.Visible = false;
-            btnUserLogin.Visible = true;
             Response.Redirect("~/Default.aspx");
         }
     }

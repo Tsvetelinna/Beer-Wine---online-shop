@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class ="container">
-            <div class ="center " text-align: center>
+            <div class ="form-horizontal " text-align: center>
                  <h2>Sign Up</h2>
                 <hr />
             <label class="col-xs-11">UserName:</label>
