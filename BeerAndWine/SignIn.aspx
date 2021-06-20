@@ -10,13 +10,13 @@
                 <hr />
             <label class="col-xs-11">UserName:</label>
             <div class="col-xs-11">
-            <asp:TextBox ID="txtUsername" runat="server" Class="form-control" placeholder="Enter Your UserName"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" style="width: 200px" Class="form-control" placeholder="Enter Your UserName"></asp:TextBox>
             </div>
 
 
             <label class="col-xs-11">Password:</label>
             <div class="col-xs-11">
-            <asp:TextBox ID="txtPassword" runat="server" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" style="width: 200px" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
             </div>
 
             <label class="col-xs-11"></label>
