@@ -14,7 +14,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void btnAdminlogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Home/Default.aspx");
         Session["Username"] = null;
     }
 }

@@ -20,7 +20,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         else
         {
             btnUserLogout.Visible = false;
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Home/Default.aspx");
         }
     }
 
@@ -28,7 +28,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void btnUserLogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Home/Default.aspx");
         Session["Username"] = null;
 
     }

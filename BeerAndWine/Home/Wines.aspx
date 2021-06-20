@@ -1,10 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="Beers.aspx.cs" Inherits="Beers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home/Default.master" AutoEventWireup="true" CodeFile="Wines.aspx.cs" Inherits="Wines" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      <br />  
-      <h2>Beers</h2>
+   
+     <br /> 
+      <h2>Wines</h2>
                 <hr />
     <div class="row" style="padding-top:50px">
     <asp:repeater ID="rptrProducts" runat="server">

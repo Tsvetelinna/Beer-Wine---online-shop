@@ -14,16 +14,16 @@ public partial class _Default : System.Web.UI.Page
     protected void btnlogout_Click(object sender, EventArgs e)
     {
         Session["Username"] = null;
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Home/Default.aspx");
     }
 
     protected void btnBeers_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Beers.aspx");
+        Response.Redirect("~/Home/Beers.aspx");
     }
 
     protected void btnWines_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Wines.aspx");
+        Response.Redirect("~/Home/Wines.aspx");
     }
 }
