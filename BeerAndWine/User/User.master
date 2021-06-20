@@ -29,6 +29,23 @@
 	.badge_cart {
 		float: right;
 	}
+
+    .thumbnail_product
+    {
+
+      height:500px;
+    }
+
+  .product_img
+  {
+    max-height:400px;
+    max-width:292px;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 20px;
+  }
 </style>
     
         <script>

@@ -11,8 +11,8 @@
     <asp:repeater ID="rptrProducts" runat="server">
         <ItemTemplate> 
         	<div class="col-sm-3 col-md-3">
-          	<div class="thumbnail" style="height:500px; width:400px">              
-              	<img style="max-height:400px; max-width:300px" src="../Images/ProductImages/<%# Eval("Id") %>/<%# Eval("ImageName") %><%# Eval("Extension") %>" alt="<%# Eval("ImageName") %>"/>
+          	<div class="thumbnail thumbnail_product">              
+              	<img class="product_img" src="../Images/ProductImages/<%# Eval("Id") %>/<%# Eval("ImageName") %><%# Eval("Extension") %>" alt="<%# Eval("ImageName") %>"/>
               	<div class="caption"> 
                    <div class="probrand">
                       <h4><%# Eval ("BrandName") %>  </h4>
