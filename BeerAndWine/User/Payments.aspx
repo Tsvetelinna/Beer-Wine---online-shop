@@ -1,11 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Payments.aspx.cs" Inherits="Payments" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+          <title>Payment</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:HiddenField ID="hdTotalPayed" runat="server" />
-    <br />
-    <br />
+            <br />
+           <br />
+           <br />
+           <h2>Payment</h2>
+           <hr />
 
     <div class="row" style="padding-top: 20px;">
        
@@ -14,16 +18,16 @@
                 <h3>Delivery Address</h3>
                 <hr />
                 <div class="form-group">
-                    <asp:Label ID="Label1" runat="server" CssClass="control-label" Text="Name"></asp:Label>
-                    <asp:TextBox ID="txtName" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:Label ID="Label1" runat="server"  CssClass="control-label" Text="Name"></asp:Label>
+                    <asp:TextBox ID="txtName" style="width: 250px" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <asp:Label ID="Label2" runat="server" CssClass="control-label" Text="Address"></asp:Label>
-                    <asp:TextBox ID="txtAddress" TextMode="MultiLine" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAddress" TextMode="MultiLine" style="width: 250px" CssClass="form-control" runat="server"></asp:TextBox>
                 </div> 
                 <div class="form-group">
                     <asp:Label ID="Label4" runat="server" CssClass="control-label" Text="Mobile Number"></asp:Label>
-                    <asp:TextBox ID="txtMobileNumber" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMobileNumber" style="width: 250px" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
         </div>
@@ -49,15 +53,15 @@
                 <div id="cards" class="tab-pane fade">
                     <div class="form-group">
                         <asp:Label ID="CardNumber" runat="server" CssClass="control-label" Text="Card Number"></asp:Label>
-                        <asp:TextBox ID="txtCardNumber" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCardNumber" style="width: 250px" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="ValidDate" runat="server" CssClass="control-label" Text="Valid To (dd/MM/yyyy)"></asp:Label>
-                        <asp:TextBox ID="txtValidDate" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtValidDate" style="width: 250px" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="CardCode" runat="server" CssClass="control-label" Text="Card Code"></asp:Label>
-                        <asp:TextBox ID="txtCardCode" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCardCode" style="/*width: 250px*/" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                      <asp:Button ID="btnPayWithCard" runat="server" Text="Pay with Card" onClick="btnPayWithCard_Click"/>
                      &nbsp;<asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
