@@ -9,9 +9,8 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
-    }
 
+    }
     protected void btnlogout_Click(object sender, EventArgs e)
     {
         Session["Username"] = null;
@@ -20,11 +19,11 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnBeers_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Beers/Beers.aspx");
+        Response.Redirect("~/Beers.aspx");
     }
 
     protected void btnWines_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Wines/Wines.aspx");
+        Response.Redirect("~/Wines.aspx");
     }
 }

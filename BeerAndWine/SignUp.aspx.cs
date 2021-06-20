@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 public partial class SignUp : System.Web.UI.Page
 {
@@ -13,6 +14,7 @@ public partial class SignUp : System.Web.UI.Page
     {
 
     }
+
 
     protected void txtsignup_Click(object sender, EventArgs e)
     {

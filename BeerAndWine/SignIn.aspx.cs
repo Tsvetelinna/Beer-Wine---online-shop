@@ -8,7 +8,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 
-
 public partial class SignIn : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -40,7 +39,7 @@ public partial class SignIn : System.Web.UI.Page
                     if (Request.QueryString["url"] != null && Request.QueryString["url"] == "cart")
                     {
                         Response.Redirect("~/User/Cart.aspx");
-                    } 
+                    }
                     else
                     {
                         Response.Redirect("~/User/UserHome.aspx");
@@ -56,12 +55,8 @@ public partial class SignIn : System.Web.UI.Page
                 lblError.Text = "Invalid Username or password";
             }
 
-            //Response.Write("<script> alert('Login Successfully done');  </script>");
             clr();
             con.Close();
-            //lblMsg.Text = "Registration Successfully done";
-            //lblMsg.ForeColor = System.Drawing.Color.Green;
-
         }
     }
 
